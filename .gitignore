@@ -1,0 +1,15 @@
+# Ignore all files in uploads/ folder
+/uploads/*
+# Except this file, to keep the folder in repo
+!/uploads/.gitkeep
+
+# OS / environment junk
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Env files (if you ever add secrets)
+/.env
+.env.local
