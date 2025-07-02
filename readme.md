@@ -32,28 +32,31 @@ A secure and smart full-stack **Lost & Found web application** built using **PHP
 
 > 💡 Below are the screenshots demonstrating key flows of the application:
 
-1. **Passenger Registration Form with Travel Info**
+1. **Clean UI for best experience**
+   ![landing page](screenshots/landing_page.png)
+
+2. **Passenger Registration Form with Travel Info**
    ![Passenger Registration](screenshots/1_passenger_registration.png)
 
-2. **Staff Registration with Staff ID Authentication**
+3. **Staff Registration with Staff ID Authentication**
    ![Staff Registration](screenshots/2_staff_registration.png)
 
-3. **Reporting Lost Items Interface**
+4. **Reporting Lost Items Interface**
    ![Report Lost](screenshots/3_report_lost.png)
 
-4. **Reporting Found Items Interface**
+5. **Reporting Found Items Interface**
    ![Report Found](screenshots/4_report_found.png)
 
-5. **View All Reported Items**
+6. **View All Reported Items**
    ![Reported Items List](screenshots/5_reported_items_list.png)
 
-6. **Admin Login Verification (Smart Match Access)**
+7. **Admin Login Verification (Smart Match Access)**
    ![Admin Login](screenshots/6_admin_login.png)
 
-7. **Smart Match Interface (Admin-Only)**
+8. **Smart Match Interface (Admin-Only)**
    ![Smart Match Interface](screenshots/7_smart_match.png)
 
-8. **Matched Items Display**
+9. **Matched Items Display**
    ![Matched Items](screenshots/8_matched_items_list.png)
 
 ---

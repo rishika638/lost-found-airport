@@ -6,20 +6,94 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa;
+      background: linear-gradient(to right, #f4fafd, #e9f5ff);
+      font-family: 'Poppins', sans-serif;
     }
+
     .container {
       margin-top: 50px;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
     }
-    .table th, .table td {
-      vertical-align: middle;
+
+    h2 {
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .match-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f1f5f9;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid #198754;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .match-row:hover {
+      background-color: #e8f5e9;
+    }
+
+    .item-box {
+      flex: 1;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .item-box h6 {
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .item-box p {
+      margin: 0;
+      color: #555;
+    }
+
+    .vs-divider {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6c757d;
+    }
+
+    .date-badge {
+      font-size: 0.8rem;
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 30px;
+      margin-top: 5px;
+      display: inline-block;
+    }
+
+    .match-id {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .no-match {
+      text-align: center;
+      padding: 20px;
+      font-weight: 500;
+      color: #888;
+      background-color: #f8f9fa;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h2 class="text-center mb-4">Matched Items</h2>
+  <h2>Matched Items</h2>
 
   <?php
   $conn = mysqli_connect("localhost", "root", "", "lost_found");
@@ -41,34 +115,24 @@
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
-      echo "<div class='table-responsive'>
-              <table class='table table-bordered table-hover bg-white'>
-                <thead class='table-dark text-center'>
-                  <tr>
-                    <th>Match ID</th>
-                    <th>Lost Item Description</th>
-                    <th>Date Lost</th>
-                    <th>Found Item Description</th>
-                    <th>Date Found</th>
-                  </tr>
-                </thead>
-                <tbody>";
-
       while ($row = mysqli_fetch_assoc($result)) {
-          echo "<tr>
-                  <td>{$row['match_id']}</td>
-                  <td>{$row['lost_description']}</td>
-                  <td>{$row['date_lost']}</td>
-                  <td>{$row['found_description']}</td>
-                  <td>{$row['date_found']}</td>
-                </tr>";
+          echo "<div class='match-row'>
+                  <div class='item-box'>
+                    <div class='match-id'>Match ID: {$row['match_id']}</div>
+                    <h6>Lost Item</h6>
+                    <p>{$row['lost_description']}</p>
+                    <span class='date-badge'>Lost on: {$row['date_lost']}</span>
+                  </div>
+                  <div class='vs-divider'>🔁</div>
+                  <div class='item-box'>
+                    <h6>Found Item</h6>
+                    <p>{$row['found_description']}</p>
+                    <span class='date-badge bg-success'>Found on: {$row['date_found']}</span>
+                  </div>
+                </div>";
       }
-
-      echo "</tbody>
-            </table>
-          </div>";
   } else {
-      echo "<div class='alert alert-info text-center'>No matched items found.</div>";
+      echo "<div class='no-match'>No matched items found.</div>";
   }
 
   mysqli_close($conn);
