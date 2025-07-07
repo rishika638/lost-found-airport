@@ -15,7 +15,7 @@ A secure and smart full-stack **Lost & Found web application** built using **PHP
   - Report dates are validated — no future or too-old entries allowed.
 
 - 🛡️ **Admin Authentication**
-  - Smart matching of lost and found items is secured via **admin password login**.
+  - Smart matching of lost and found items is secured via **admin password log in**.
   - Only authenticated admins can match and confirm items.
 
 - 🤝 **Smart Matching System**
@@ -50,7 +50,7 @@ A secure and smart full-stack **Lost & Found web application** built using **PHP
 6. **View All Reported Items**
    ![Reported Items List](screenshots/5_reported_items_list.png)
 
-7. **Admin Login Verification (Smart Match Access)**
+7. **Admin Log In Verification (Smart Match Access)**
    ![Admin Login](screenshots/6_admin_login.png)
 
 8. **Smart Match Interface (Admin-Only)**
@@ -99,4 +99,6 @@ lost_found_2.O/
 ├── view_items.php # View all items
 
 ├── .gitignore # Keeps uploads clean
+
+
 
