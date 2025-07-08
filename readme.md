@@ -61,7 +61,7 @@ A secure and smart full-stack **Lost & Found web application** built using **PHP
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Tech Stack:
 
 - **Frontend**: HTML, CSS, Bootstrap 5
 - **Backend**: PHP (MySQLi)
