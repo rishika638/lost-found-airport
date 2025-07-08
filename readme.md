@@ -101,4 +101,15 @@ lost_found_2.O/
 ├── .gitignore # Keeps uploads clean
 
 
+👥 Team Members
+
+Rajanna Adhikary
+
+Pratham Ahuja
+
+Prasun Basak
+
+Rishika Kumari
+
+
 
